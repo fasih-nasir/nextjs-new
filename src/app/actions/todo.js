@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache"
 export async function addtodo(form) {
     const todo = form.get("name")
     try{
-        await fetch("http://localhost:3001/api/todos", {
+        await fetch("http://localhost:3000/api/todos", {
             method: "POST",
             body: JSON.stringify({ todo }),
         });
